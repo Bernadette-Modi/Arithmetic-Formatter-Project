@@ -21,3 +21,6 @@ def arithmetic_arranger(problems, display_answers=False):
         if len(num1) > 4 or len(num2) > 4:
             return "Error: Numbers cannot be more than four digits."
         width = max(len(num1), len(num2)) + 2
+
+        first_line += num1.rjsut(width) + ("    " if i < len(problems) - 1 else "")
+        
