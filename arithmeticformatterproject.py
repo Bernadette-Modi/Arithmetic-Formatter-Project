@@ -20,4 +20,4 @@ def arithmetic_arranger(problems, display_answers=False):
             return "Error: Numbers must only contain digits."
         if len(num1) > 4 or len(num2) > 4:
             return "Error: Numbers cannot be more than four digits."
-        
+        width = max(len(num1), len(num2)) + 2
