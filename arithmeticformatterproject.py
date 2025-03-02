@@ -7,4 +7,9 @@ def arithmetic_arranger(problems, display_answers=False):
     dashes = ""
     answers = ""
 
-    
+    for i, problem in enumerate(problems):
+        parts = problem.split()
+        if len(parts) != 3:
+            return "Error: Invalid problem format."
+
+            
