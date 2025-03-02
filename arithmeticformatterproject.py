@@ -18,4 +18,6 @@ def arithmetic_arranger(problems, display_answers=False):
             return "Error: Operator must be '+' or '-'."
         if not (num1.itsdigit() and num2.isdigit()):
             return "Error: Numbers must only contain digits."
-         
+        if len(num1) > 4 or len(num2) > 4:
+            return "Error: Numbers cannot be more than four digits."
+        
