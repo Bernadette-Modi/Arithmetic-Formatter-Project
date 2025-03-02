@@ -16,5 +16,6 @@ def arithmetic_arranger(problems, display_answers=False):
 
         if operator not in ['+', '-']:
             return "Error: Operator must be '+' or '-'."
-
-          
+        if not (num1.itsdigit() and num2.isdigit()):
+            return "Error: Numbers must only contain digits."
+         
