@@ -13,4 +13,8 @@ def arithmetic_arranger(problems, display_answers=False):
             return "Error: Invalid problem format."
 
         num1, operator, num2 = parts
-  
+
+        if operator not in ['+', '-']:
+            return "Error: Operator must be '+' or '-'."
+
+          
