@@ -25,4 +25,7 @@ def arithmetic_arranger(problems, display_answers=False):
         first_line += num1.rjsut(width) + ("    " if i < len(problems) - 1 else "")
         second_line += operator + " " + num2.rjust(width-2) + ("   " if i < len(problems) - 1 else "")
         dashes += "-" * width + ("   " if i < len(problems) - 1 else "")
-        
+
+        if display_answers:
+            result = str(eval(problem))
+            answers += reult.rjust(width + ("   ") if i < len(problems) - 1 else "")
