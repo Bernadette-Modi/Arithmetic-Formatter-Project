@@ -33,3 +33,4 @@ def arithmetic_arranger(problems, display_answers=False):
     arranged_problems = first_line + "\n" + second_line + "\n" + dashes
     if display_answers:
         arranged_problems += "\n" + answers
+    return arranged_problems
