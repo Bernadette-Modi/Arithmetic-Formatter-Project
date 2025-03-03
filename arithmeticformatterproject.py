@@ -16,21 +16,24 @@ def arithmetic_arranger(problems, display_answers=False):
 
         if operator not in ['+', '-']:
             return "Error: Operator must be '+' or '-'."
-        if not (num1.itsdigit() and num2.isdigit()):
+        if not (num1.isdigit() and num2.isdigit()):
             return "Error: Numbers must only contain digits."
         if len(num1) > 4 or len(num2) > 4:
             return "Error: Numbers cannot be more than four digits."
         width = max(len(num1), len(num2)) + 2
 
-        first_line += num1.rjsut(width) + ("    " if i < len(problems) - 1 else "")
+        first_line += num1.rjust(width) + ("    " if i < len(problems) - 1 else "")
         second_line += operator + " " + num2.rjust(width-2) + ("   " if i < len(problems) - 1 else "")
         dashes += "-" * width + ("   " if i < len(problems) - 1 else "")
 
         if display_answers:
             result = str(eval(problem))
-            answers += reult.rjust(width + ("   ") if i < len(problems) - 1 else "")
+            answers += result.rjust(width) + ("   " if i < len(problems) - 1 else "")
     
     arranged_problems = first_line + "\n" + second_line + "\n" + dashes
     if display_answers:
         arranged_problems += "\n" + answers
     return arranged_problems
+
+print(arithmetic_arranger(["32 + 698", "3801 - 2", "45 + 43", "123 + 49"]))
+print(arithmetic_arranger(["32 + 8", "1 - 3801", "9999 + 9999", "523 - 49"], True))
