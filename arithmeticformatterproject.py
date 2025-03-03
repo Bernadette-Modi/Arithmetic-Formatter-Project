@@ -23,4 +23,4 @@ def arithmetic_arranger(problems, display_answers=False):
         width = max(len(num1), len(num2)) + 2
 
         first_line += num1.rjsut(width) + ("    " if i < len(problems) - 1 else "")
-        
+        seconf_line += operator + " " + num2.rjust(width-2) + ("   " if i < len(problems) - 1 else "")
