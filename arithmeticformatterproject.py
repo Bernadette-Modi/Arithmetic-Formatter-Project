@@ -29,3 +29,7 @@ def arithmetic_arranger(problems, display_answers=False):
         if display_answers:
             result = str(eval(problem))
             answers += reult.rjust(width + ("   ") if i < len(problems) - 1 else "")
+    
+    arranged_problems = first_line + "\n" + second_line + "\n" + dashes
+    if display_answers:
+        arranged_problems += "\n" + answers
